@@ -1,0 +1,13 @@
+{% extends "layout/basic.html" %}
+
+{% block title %}Добавление объявления{% endblock %}
+
+{% block content %}
+<h2>Добавление объявления</h2>
+<form method="post">
+    {% csrf_token %}
+<!--        form из вьюшки в классе бб create view переменная формкласс, as_p для вывода формы-->
+    {{ form.as_p }}
+    <input type="submit" value="Добавить">
+    </form>
+{% endblock %}
